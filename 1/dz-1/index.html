@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Доставка пиццы</title>
+</head>
+<body>
+
+   <h1>Сайт доставки пиццы</h1>
+
+   <form action="#">
+      <h2>Регистрация</h2>
+      <p><span>Введите имя: </span> <input type="text" name="name"></p>
+      <p><span>Введите телефон: </span> <input type="text" name="phone" placeholder="380 123 45 67"> </p>
+      <p><span>Введите пароль: </span> <input type="password" name="password"></p>
+      <p><span>Подтвердите пароль: </span> <input type="password" name="password2"></p>
+      <hr>
+
+      <h2>Выберите себе свою пиццу</h2>
+      <p>Выберите форму пиццы:</p>
+      <p>
+         <span>Круглая:</span><input type="radio" name="forma" value="circle" checked>
+         <span> &nbsp; Квадратная:</span><input type="radio" name="forma" value="square">
+         <span>&nbsp; Треугольная:</span><input type="radio" name="forma" value="triangle">
+         <span>&nbsp; Многоугольная:</span><input type="radio" name="forma" value="polygon">
+      </p>
+
+      <hr>
+
+      <p>Выберите размер пиццы:</p>
+      <p>
+         <span>Маленькая:</span><input type="radio" name="size" value="small" checked>
+         <span> &nbsp; Обычная:</span><input type="radio" name="size" value="normal">
+         <span>&nbsp; Большая:</span><input type="radio" name="size" value="big">
+      </p>
+
+      <hr>
+
+      <p>Выберите начинку для пиццы:</p>
+      <p>
+         <span>Грибы:</span><input type="checkbox" name="mushrooms" value="mushrooms" checked>
+         <span> &nbsp; Помидоры:</span><input type="checkbox" name="tomatoes" value="tomatoes">
+         <span>&nbsp; Сыр:</span><input type="checkbox" name="cheese" value="cheese">
+         <span>&nbsp; Колбаса:</span><input type="checkbox" name="sausage" value="sausage">
+         <span>&nbsp; Анчоусы:</span><input type="checkbox" name="anchovies" value="anchovies">
+      </p>
+      <hr>
+      <p>Выберите способ доставки:</p>
+      <select name="delivery" size="1">
+         <option value="1" selected>Обычная</option>
+         <option value="2">Экспресс</option>
+         <option value="3">Самовывоз</option>
+     </select>
+     <p>Введите адресс доставки:</p>
+     <textarea name="address" cols="25" rows="3"></textarea>
+
+      <hr>
+      <button type="submit">Отправить заказ</button>
+
+   </form>
+   
+</body>
+</html>

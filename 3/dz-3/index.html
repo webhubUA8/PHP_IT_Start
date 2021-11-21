@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dz-3</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+</head>
+<body>
+
+   <div class="container pt-5 pb-5">
+      <p class="font-weight-bold">Задание 1</p>
+      <div class="form bg-info p-5 text-white mb-3">
+         <div class="col-md-6 mb-3">
+           <label for="rent">Арендная плата</label>
+           <input type="text" class="form-control" id="rent" value="100">
+         </div>
+         <div class="col-md-6 mb-3">
+           <label for="fine">Размер пени</label>
+           <input type="number" class="form-control" id="fine" value="2">
+         </div>
+         <div class="col-md-6 mb-3">
+           <label for="days">Количество дней</label>
+           <input type="number" class="form-control" id="days" required>
+         </div>
+         <button type="button" class="btn btn-warning mt-3 ml-3" id='btn'>Подсчитать</button>
+         <div class="col-md-6 mb-3 mt-5">
+            <label for="res">Результат</label>
+            <input type="text" class="form-control" id="res">
+          </div>
+
+      </div>
+      <hr>
+      <p class="font-weight-bold">Задание 2</p>
+      <div class="task-2 bg-info p-5 mt-3">
+         <div class="form-check">
+         <input class="form-check-input" type="radio" name="exampleRadios" id="1" value="1">
+         <label class="form-check-label text-white" for="1">
+            1)Какое максимальное значение удалось заработать.
+         </label>
+       </div>
+         <div class="form-check">
+         <input class="form-check-input" type="radio" name="exampleRadios" id="2" value="2">
+         <label class="form-check-label text-white" for="2">
+            2)Вывести номера дней, когда продажи были равны максимальному значению.
+         </label>
+       </div>
+         <div class="form-check">
+         <input class="form-check-input" type="radio" name="exampleRadios" id="3" value="3">
+         <label class="form-check-label text-white" for="3">
+            3)Сколько дней держались максимальные продажи
+         </label>
+       </div>
+         <div class="form-check">
+         <input class="form-check-input" type="radio" name="exampleRadios" id="4" value="4">
+         <label class="form-check-label text-white" for="4">
+            4)Количество дней, где продажи были выше среднего значения и общую сумму продаж за эти дни.
+         </label>
+       </div>
+         <div class="form-check">
+         <input class="form-check-input" type="radio" name="exampleRadios" id="5" value="5">
+         <label class="form-check-label text-white" for="5">
+            5)Отсортировать продажи по убыванию.
+         </label>
+       </div>
+       <button type="button" class="btn btn-warning mt-3 ml-3" id='btn2'>Вывести</button>
+       <div class="out mt-5 p-2 bg-light" style="height: 33px; font-size: 15px; font-weight: bold;"></div>
+      </div>
+      <hr>
+      <p class="font-weight-bold">Задание 3</p>
+      <div class="task-3 bg-info p-5 mt-3">
+         <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios2" id="11" value="11">
+            <label class="form-check-label text-white" for="11">
+               1)Общую сумму продаж за весь рабочий период.
+            </label>
+          </div>
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios2" id="22" value="22">
+            <label class="form-check-label text-white" for="22">
+               2)День недели, когда было продано наименьшее количество телефонов.
+            </label>
+          </div>
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios2" id="33" value="33">
+            <label class="form-check-label text-white" for="33">
+               3)Какая неделя дала наибольшее количество продаж
+            </label>
+          </div>
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios2" id="44" value="44">
+            <label class="form-check-label text-white" for="44">
+               4)Средние продажи по средам. 
+            </label>
+          </div>
+            
+          <button type="button" class="btn btn-warning mt-3 ml-3" id='btn3'>Вывести</button>
+          <div class="out-2 mt-5 p-2 bg-light" style="height: 33px; font-size: 15px; font-weight: bold;"></div>
+      </div>
+
+   </div>
+   
+
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+   <script src="script.js"></script>
+</body>
+</html>
