@@ -1,0 +1,19 @@
+.table-block {
+   width: 80%;
+   margin: 0 auto;
+   padding: 10px;
+   background-color: transparent;
+}
+
+.table-cell {
+   height: 40px;
+   width: 90px;
+}
+
+.bg-light {
+   background-color: #fff;
+}
+
+.bg-gray {
+   background-color: gray;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dz-5</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+   <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+   <div class="container p-3 mt-5 mb-5">
+
+      <div class="form-container bg-warning p-3 mx-5 my-3">
+         <form class="construction-goods p-3 mx-5 my-3">
+      
+         <div class="products-block mb-4">
+            <div class="form-group">
+            <label class="font-weight-bold text-uppercase" for="exampleFormControlSelect1">Товары</label>
+            <select class="form-control price" id="exampleFormControlSelect1">
+               <option value="100">Обои - 100грн.</option>
+               <option value="150">Краска - 150грн.</option>
+               <option value="250">Гипсокартон - 250грн.</option>
+               <option value="300">Фанера - 300грн.</option>
+               <option value="50">Шпаклека - 50грн.</option>
+            </select>
+            </div>
+         </div>
+      
+
+      <div class="products2-block mb-4">
+         <p class="font-weight-bold text-uppercase">Может пригодиться</p>
+         <div class="form-check">
+            <input class="form-check-input price" type="checkbox" value="5" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+               Кисточка мал. - 5грн.
+            </label>
+         </div>
+         <div class="form-check"><input class="form-check-input price" type="checkbox" value="15" id="defaultCheck2">
+            <label class="form-check-label" for="defaultCheck2">
+               Кисточка бол. - 15грн.
+            </label>
+         </div>
+         <div class="form-check">
+            <input class="form-check-input price" type="checkbox" value="25" id="defaultCheck3">
+            <label class="form-check-label" for="defaultCheck3">
+               Валик - 25грн.
+            </label>
+         </div> 
+         <div class="form-check">
+            <input class="form-check-input price" type="checkbox" value="20" id="defaultCheck4">
+            <label class="form-check-label" for="defaultCheck4">
+               Шпатель - 20грн.
+            </label>
+         </div>  
+         <div class="form-check">
+            <input class="form-check-input price" type="checkbox" value="15" id="defaultCheck5">
+            <label class="form-check-label" for="defaultCheck5">
+               Скребок - 15грн.
+            </label>
+         </div>  
+         <div class="form-check mb-3">
+            <input class="form-check-input price" type="checkbox" value="30" id="defaultCheck6">
+            <label class="form-check-label" for="defaultCheck6">
+               Клей - 30 грн.
+            </label>
+         </div> 
+      </div>
+        
+      
+      <div class="delivery-block mb-4">
+         <p class="font-weight-bold text-uppercase">Способ доставки</p>
+         <div class="form-check form-check-inline">
+            <input class="form-check-input price" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="50">
+            <label class="form-check-label" for="inlineRadio1">Доставка магазина: +50 грн.</label>
+         </div>
+         <div class="form-check form-check-inline">
+            <input class="form-check-input price" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="0" checked>
+            <label class="form-check-label" for="inlineRadio2">Самовывоз</label>
+         </div>
+      </div>
+      
+      <div class="payment-block mb-4">
+         <p class="font-weight-bold text-uppercase">Способ оплаты</p>
+         <div class="form-check form-check-inline">
+            <input class="form-check-input price" type="radio" name="paymentProcent" id="inlineRadio11" value="1" checked>
+            <label class="form-check-label" for="inlineRadio11">Наличные: +1%</label>
+         </div>
+         <div class="form-check form-check-inline">
+            <input class="form-check-input price" type="radio" name="paymentProcent" id="inlineRadio22" value="3">
+            <label class="form-check-label" for="inlineRadio22">Безнал: +3%</label>
+         </div>
+      </div>
+
+      <div class="form-group philanthropy">
+         <label class="font-weight-bold text-uppercase" for="exampleFormexampleFormControlInput1">Благотворительность</label>
+         <input type="number" class="form-control" id="exampleFormControlInput1">
+       </div>
+
+      <div class="form-group">
+        <label class="font-weight-bold text-uppercase" for="exampleFormControlTextarea1">Конечная стоимость заказа</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+      </div>
+    </form>
+      </div>
+      
+   
+
+   <!-- 3 -->
+
+
+   <div class="table-block">
+      <div class="table-container mb-5">
+         <table></table>
+      </div>
+      <button type="button" class="btn btn-primary btn-1">Primary</button>
+      <button type="button" class="btn btn-success btn-2">Success</button>
+   </div>
+
+</div>
+   <style>
+.r1 {background-color: #33FF33; height: 30px; width: 30px;}
+.r2 {background-color: #3366FF; height: 30px; width: 30px;}
+</style>
+<script>
+var n = 9;
+document.write("<table>");
+for (i=0; i<n; i++)
+    {
+    document.write("<tr>")
+        for (j=0; j<n; j++)
+            {
+            //st = (i+j)%2;
+            if ((Math.floor(i / 3)%2) == (Math.floor(j / 3)%2)) s ="class='r1'";
+            else s = "class='r2'";
+            document.write("<td " +s+ "></td>");
+            }
+    document.write("</tr>")
+    }
+document.write("</table>")
+
+
+
+</script>  
+
+   
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<script src="./script.js"></script>
+
+</body>
+</html>
