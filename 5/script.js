@@ -1,5 +1,37 @@
+// 1 ============================================================
+let matrixElements = document.querySelectorAll('.matrix-form-el');
+let matrixBtn = document.querySelector('.matrix-btn');
+let matrixVal = [];
+let matrixTable = document.querySelector('.matrix-table table');
+let multiplier = document.getElementById('multiplier');
 
-// 2============================================================
+matrixBtn.addEventListener('click', () => {
+   
+   createMatrixTable();
+   matrixVal.length = 0;
+})
+
+function createMatrixTable() {
+   matrixElements.forEach(el => {
+      matrixVal.push(+el.value);
+   })
+
+   let count = 0;
+   matrixTable.innerHTML = '';
+   for (let i = 0; i < 3; i++){
+      let row = matrixTable.insertRow();
+      for (let k = 0; k < 3; k++){
+         let cell = row.insertCell();
+         count++;
+         cell.classList.add('table-cell2', 'text-center');
+         cell.style.border = '2px solid black';
+         cell.innerHTML = matrixVal[count - 1] * +multiplier.value;
+      }
+   }
+}
+
+
+// 2 ============================================================
 
 let constructionGoods = document.querySelector('.construction-goods');
 let priceGoods = document.querySelectorAll('.price');
@@ -50,12 +82,15 @@ function calcTotalPrice() {
    result.innerHTML = `Ваш заказ на сумму: ${(+philanthropy.value + sum).toLocaleString('ru-RU')} грн.`;
 }
 
-// 3=================================================================
+// 3 =================================================================
 let tableBlock = document.querySelector('.table-block');
 let tableContainer = document.querySelector('.table-container');
-let table = tableContainer.querySelector('table');
+let table = tableContainer.querySelector('.table-container table');
 let btn1 = document.querySelector('.btn-1');
 let btn2 = document.querySelector('.btn-2');
+let colorInput = document.querySelector('.color');
+let line = document.getElementById('inp1');
+let column = document.getElementById('inp2');
 
 function createTable() {
    for (let i = 0; i < 8; i++){
@@ -82,37 +117,40 @@ btn1.addEventListener('click', () => {
          let cell = row.insertCell();
          cell.classList.add('table-cell');
          cell.style.border = '1px solid black';
-         if ((k + 1) % 2 !== 0) {jove
+         if ((i + 1) % 2 !== 0 && (k + 1) % 2 !== 0) {
+            cell.classList.add('bg-gray');
+         }
+         if ((i + 1) % 2 == 0 && (k + 1) % 2 == 0) {
             cell.classList.add('bg-gray');
          }
       }
    }
 })
 
-function tableCreate(){
-   var body = document.body,
-       tbl  = document.createElement('table');
-   tbl.style.width  = '200px';
-   tbl.style.border = '1px solid black';
+btn2.addEventListener('click', () => {
+   let lineNum = +line.value;
+   let columnNum = +column.value;
+   let color = colorInput.value;
 
-   for(var i = 0; i < 3; i++){
-       var tr = tbl.insertRow();
-       for(var j = 0; j < 2; j++){
-           if(i == 2 && j == 1){
-               break;
-           } else {
-               var td = tr.insertCell();
-               td.appendChild(document.createTextNode('Cell'));
-               td.style.border = '1px solid black';
-               if(i == 1 && j == 1){
-                   td.setAttribute('rowSpan', '2');
-               }
-           }
-       }
+   table.innerHTML = '';
+
+   for (let i = 0; i < 8; i++){
+      let row = table.insertRow();
+      for (let k = 0; k < 7; k++){
+         let cell = row.insertCell();
+         cell.classList.add('table-cell');
+         cell.style.border = '1px solid black';
+         if ((i + 1) == lineNum) {
+            cell.style.backgroundColor = color;
+         }
+         if ((k + 1) / columnNum == 1) {
+            cell.style.backgroundColor = color;
+         }
+         
+      }
    }
-   body.appendChild(tbl);
-}
-tableCreate();
+})
+
 
 
 
